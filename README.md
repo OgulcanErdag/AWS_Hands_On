@@ -104,9 +104,9 @@ Each hands-on includes:
 | 06  | JSON & YAML            | [JSON_YAML](./JSON_YAML)                           |
 | 07  | Load Balancing         | [Load_Balancing](./Load_Balancing)                 |
 | 08  | S3 - Part 1            | [S3_1](./S3_1)                                     |
-| 09  | ASG-LT                 | [ASG-LT](./ASG-LT)                                 |
-| 10  | Auto Scaling           | [Auto_Scaling](./Auto_Scaling)                     |
-| 11  | S3 - Part 2            | [S3_2](./S3_2)                                     |
+| 09  | S3 - Part 2            | [S3_2](./S3_2)                                     |
+| 10  | ASG-LT                 | [ASG-LT](./ASG-LT)                                 |
+| 11  | Auto Scaling           | [Auto_Scaling](./Auto_Scaling)                     |
 | 12  | EFS                    | [EFS](./EFS)                                       |
 | 13  | AWS CLI                | [CLI](./CLI)                                       |
 | 14  | CFN ASG ALB LT         | [CFN-ASG-ALB-LT](./CFN-ASG-ALB-LT)                 |
