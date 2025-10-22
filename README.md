@@ -96,10 +96,10 @@ Each hands-on includes:
 ## 🧾 Progress Overview
 
 | No  | Topic                  | Folder                                             |
-| --- | ---------------------- | -------------------------------------------------- | --- |
+| --- | ---------------------- | -------------------------------------------------- | 
 | 01  | EC2 Introduction       | [EC2_Introduction](./EC2_Introduction)             |
 | 02  | IAM                    | [IAM](./IAM)                                       |
-| 03  | NGINX Launch Template  | [NGINX-Launch_Template](./NGINX-Launch_Template)   |     |
+| 03  | NGINX Launch Template  | [NGINX-Launch_Template](./NGINX-Launch_Template)   |     
 | 04  | Volumes                | [Volumes](./Volumes)                               |
 | 05  | AMI & Snapshot         | [AMI_Snapshot](./AMI_Snapshot)                     |
 | 06  | ELB                    | [Guile-ELB](./Guile-ELB)                           |
