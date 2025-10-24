@@ -102,36 +102,37 @@ Each hands-on includes:
 | 03  | NGINX Launch Template  | [NGINX-Launch_Template](./NGINX-Launch_Template)   |
 | 04  | Volumes                | [Volumes](./Volumes)                               |
 | 05  | AMI & Snapshot         | [AMI_Snapshot](./AMI_Snapshot)                     |
-| 06  | ELB                    | [Guile-ELB](./Guile-ELB)                           |
-| 07  | Load Balancing         | [Load_Balancing](./Load_Balancing)                 |
-| 08  | Auto Scaling           | [Auto_Scaling](./Auto_Scaling)                     |
-| 09  | CFN ASG ALB LT         | [CFN-ASG-ALB-LT](./CFN-ASG-ALB-LT)                 |
-| 10  | EFS                    | [EFS](./EFS)                                       |
-| 11  | CFN ASG ALB LT (Guile) | [Guile-CFN-ASG-ALB-LT](./Guile-CFN-ASG-ALB-LT)     |
-| 12  | S3 - Part 1            | [S3_1](./S3_1)                                     |
-| 13  | S3 - Part 2            | [S3_02](./S3_02)                                   |
-| 14  | AWS CLI                | [Guile-CLI](./Guile-CLI)                           |
-| 15  | Database RDS           | [Database_RDS](./Database_RDS)                     |
-| 16  | MariaDB                | [Guile-MariaDB](./Guile-MariaDB)                   |
-| 17  | DB Restore SS PiT      | [DB_Restore_SS_PiT](./DB_Restore_SS_PiT)           |
-| 18  | DynamoDB               | [Guile-DynamoDB](./Guile-DynamoDB)                 |
-| 19  | VPC - Part 1           | [VPC_01](./VPC_01)                                 |
-| 20  | VPC - Part 2           | [Guile-VPC-2](./Guile-VPC-2)                       |
-| 21  | VPC - Part 3           | [VPC-3](./VPC-3)                                   |
-| 22  | CloudWatch             | [Cloudwatch](./Cloudwatch)                         |
-| 23  | Route 53 - Part 1      | [Route_53_1](./Route_53_1)                         |
-| 24  | Route 53 - Part 2      | [Route_53_2](./Route_53_2)                         |
-| 25  | VPC - Part 4           | [VPC_04](./VPC_04)                                 |
-| 26  | CloudFront             | [Guile-CloudFront](./Guile-CloudFront)             |
-| 27  | Lambda & API Gateway   | [Guile-Lambda-APIGW](./Guile-Lambda-APIGW)         |
-| 28  | Elastic Beanstalk      | [Elastic_Beanstalk](./Elastic_Beanstalk)           |
-| 29  | SNS & SQS              | [Guile-SNS-SQS](./Guile-SNS-SQS)                   |
-| 30  | Boto3                  | [Boto3](./Boto3)                                   |
-| 31  | CloudFormation Sample  | [Cloud_Formation_Sample](./Cloud_Formation_Sample) |
-| 32  | CloudFront             | [Cloud_Front](./Cloud_Front)                       |
-| 33  | DynamoDB               | [DynamoDB](./DynamoDB)                             |
-| 34  | JSON & YAML            | [JSON_YAML](./JSON_YAML)                           |
-| 35  | Lambda & API           | [Lambda_API](./Lambda_API)                         |
+| 06  | JSON & YAML            | [JSON_YAML](./JSON_YAML)                           |
+| 07  | ELB                    | [Guile-ELB](./Guile-ELB)                           |
+| 08  | Load Balancing         | [Load_Balancing](./Load_Balancing)                 |
+| 09  | Auto Scaling           | [Auto_Scaling](./Auto_Scaling)                     |
+| 10  | CFN ASG ALB LT         | [CFN-ASG-ALB-LT](./CFN-ASG-ALB-LT)                 |
+| 11  | EFS                    | [EFS](./EFS)                                       |
+| 12  | CFN ASG ALB LT (Guile) | [Guile-CFN-ASG-ALB-LT](./Guile-CFN-ASG-ALB-LT)     |
+| 13  | S3 - Part 1            | [S3_1](./S3_1)                                     |
+| 14  | S3 - Part 2            | [S3_02](./S3_02)                                   |
+| 15  | AWS CLI                | [Guile-CLI](./Guile-CLI)                           |
+| 16  | Database RDS           | [Database_RDS](./Database_RDS)                     |
+| 17  | MariaDB                | [Guile-MariaDB](./Guile-MariaDB)                   |
+| 18  | DB Restore SS PiT      | [DB_Restore_SS_PiT](./DB_Restore_SS_PiT)           |
+| 19  | DynamoDB               | [Guile-DynamoDB](./Guile-DynamoDB)                 |
+| 20  | VPC - Part 1           | [VPC_01](./VPC_01)                                 |
+| 21  | VPC - Part 2           | [Guile-VPC-2](./Guile-VPC-2)                       |
+| 22  | VPC - Part 3           | [VPC-3](./VPC-3)                                   |
+| 23  | CloudWatch             | [Cloudwatch](./Cloudwatch)                         |
+| 24  | Route 53 - Part 1      | [Route_53_1](./Route_53_1)                         |
+| 25  | Route 53 - Part 2      | [Route_53_2](./Route_53_2)                         |
+| 26  | VPC - Part 4           | [VPC_04](./VPC_04)                                 |
+| 27  | CloudFront             | [Guile-CloudFront](./Guile-CloudFront)             |
+| 28  | Lambda & API Gateway   | [Guile-Lambda-APIGW](./Guile-Lambda-APIGW)         |
+| 29  | Elastic Beanstalk      | [Elastic_Beanstalk](./Elastic_Beanstalk)           |
+| 30  | SNS & SQS              | [Guile-SNS-SQS](./Guile-SNS-SQS)                   |
+| 31  | Boto3                  | [Boto3](./Boto3)                                   |
+| 32  | CloudFormation Sample  | [Cloud_Formation_Sample](./Cloud_Formation_Sample) |
+| 33  | CloudFront             | [Cloud_Front](./Cloud_Front)                       |
+| 34  | DynamoDB               | [DynamoDB](./DynamoDB)                             |
+| 35  | JSON & YAML            | [JSON_YAML](./JSON_YAML)                           |
+| 36  | Lambda & API           | [Lambda_API](./Lambda_API)                         |
 
 ---
 
