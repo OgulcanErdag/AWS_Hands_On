@@ -26,6 +26,7 @@ Each folder corresponds to a hands-on exercise:
 📁 NGINX-Launch_Template
 📁 Volumes
 📁 AMI_Snapshot
+📁 JSON_YAML
 📁 Guile-ELB
 📁 Load_Balancing
 📁 Auto_Scaling
@@ -54,7 +55,6 @@ Each folder corresponds to a hands-on exercise:
 📁 Cloud_Formation_Sample
 📁 Cloud_Front
 📁 DynamoDB
-📁 JSON_YAML
 📁 Lambda_API
 
 Each folder contains:
