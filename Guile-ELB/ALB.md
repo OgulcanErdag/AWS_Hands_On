@@ -140,7 +140,7 @@ PUBLIC_IP=$(curl -s -H "X-aws-ec2-metadata-token: $TOKEN" \
 DATE_TIME=$(date)
 
 # your name
-YOUR_NAME="paul"
+YOUR_NAME="ogulcan"
 
 # ensure document root is writable for this demo
 chmod -R 777 /var/www/html
