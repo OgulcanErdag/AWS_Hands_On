@@ -1,3 +1,5 @@
+![AWS Log](./aws.webp)
+
 # ☁️ AWS Hands-On Practices
 
 This repository includes structured **AWS hands-on exercises** created to strengthen practical knowledge of core AWS services.  
