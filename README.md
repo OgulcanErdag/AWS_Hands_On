@@ -42,8 +42,8 @@ Each folder corresponds to a hands-on exercise:
 📁 DB_Restore_SS_PiT
 📁 DynamoDB
 📁 VPC_1
-📁 VPC-2
-📁 VPC-3
+📁 VPC_2
+📁 VPC_3
 📁 Cloudwatch
 📁 Route_53_1
 📁 Route_53_2
@@ -117,8 +117,8 @@ Each hands-on includes:
 | 17  | DB Restore SS PiT     | [DB_Restore_SS_PiT](./DB_Restore_SS_PiT)           |
 | 18  | DynamoDB              | [DynamoDB](./DynamoDB)                             |
 | 19  | VPC - Part 1          | [VPC_1](./VPC_1)                                   |
-| 20  | VPC - Part 2          | [VPC-2](./VPC-2)                                   |
-| 21  | VPC - Part 3          | [VPC-3](./VPC-3)                                   |
+| 20  | VPC - Part 2          | [VPC-2](./VPC_2)                                   |
+| 21  | VPC - Part 3          | [VPC-3](./VPC_3)                                   |
 | 22  | CloudWatch            | [Cloudwatch](./Cloudwatch)                         |
 | 23  | Route 53 - Part 1     | [Route_53_1](./Route_53_1)                         |
 | 24  | Route 53 - Part 2     | [Route_53_2](./Route_53_2)                         |
