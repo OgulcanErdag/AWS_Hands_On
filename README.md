@@ -134,7 +134,8 @@ Each hands-on includes:
 
 ## ⚙️ Tools & Environment
 
-- **AWS Management Console & CLI**
+- **AWS Management Console**
+- **AWS CLI**
 - **Amazon Linux 2 / 2023**
 - **Bash, YAML, JSON**
 - **VS Code + Git**
