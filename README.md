@@ -54,7 +54,6 @@ Each folder corresponds to a hands-on exercise:
 📁 Boto3
 📁 Cloud_Formation_Sample
 📁 Cloud_Front
-📁 DynamoDB
 📁 Lambda_API
 
 Each folder contains:
