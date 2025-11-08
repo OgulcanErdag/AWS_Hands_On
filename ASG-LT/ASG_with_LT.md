@@ -187,7 +187,7 @@ Amazon Linux 2023 AMI (HVM), SSD Volume Type, (us-east-1), free tier
 - Instance Type
 
 ```text
-t2.micro
+t3.micro
 ```
 
 - Key Pair
@@ -243,7 +243,7 @@ TOKEN=`curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metad
 && PRIVATE_IP=`curl -H "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.254/latest/meta-data/local-ipv4`
 # get public ip address of ec2 instance using instance metadata
 TOKEN=`curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600"` \
-&& PUBLIC_IP=`curl -H "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.254/latest/meta-data/public-ipv4` 
+&& PUBLIC_IP=`curl -H "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.254/latest/meta-data/public-ipv4`
 # get date and time of server
 DATE_TIME=`date`
 # set all permissions
@@ -254,7 +254,7 @@ echo "<html>
     <title> Congratulations! You have created an instance from Launch Template</title>
 </head>
 <body>
-    <h1>This web server is launched from launch template by betul</h1>
+    <h1>This web server is launched from launch template by ogulcan</h1>
     <p>This instance is created at <b>$DATE_TIME</b></p>
     <p>Private IP address of this instance is <b>$PRIVATE_IP</b></p>
     <p>Public IP address of this instance is <b>$PUBLIC_IP</b></p>
@@ -382,7 +382,6 @@ Step 3: Observe that Autoscaling keeps the target group in initial size.
 
 - Show the status of the stopped instance and refresh it. It probably takes a while to create a new instance by Auto Scaling.
 
-
 ## Part 6 - Create Auto Scaling Policy
 
 - Go to `Auto Scaling Groups` --> click `First-AS-Group` --> `Automatic Scaling` --> `Add Policy`
@@ -501,7 +500,7 @@ Step 3: Testing
 
 ```bash
 sudo yum install -y stress
-stress --cpu 80 --timeout 20000   
+stress --cpu 80 --timeout 20000
 ```
 
 - Click the instance's Monitoring Tab and show the effect of `stress tool` on CPU Utilization
@@ -518,19 +517,19 @@ Step 4: Add Step Scaling Policy
 
 - Go to `Auto Scaling Groups` --> click `First-AS-Group` --> `Automatic Scaling` --> `Add Policy`
 
-
   1. Create `Add-Policy`;
 
 - Select `Step Scaling` as Policy Type
 
 - Name :
+
 ```text
 Step Policy Name : First Step Policy-Add
 ```
 
 - Select `Auto Scaling-Add` as Cloudwatch Alarm
 
-- Take the Action : 
+- Take the Action :
 
 ```text
 Add --- 1 ---- Capacity Unit ----when 60---    <=    CPUUtilization 90
@@ -543,9 +542,10 @@ Add ----2 -----Capacity Unit ----when 90 ----  <= Infinity
 An Then wait   : 200
 ```
 
-  2. Create `Remove-Policy`;
+2. Create `Remove-Policy`;
 
 - Name :
+
 ```text
 Step Policy Name : First Step Policy-Add
 ```
@@ -571,9 +571,7 @@ An Then wait   : 200
 
 - Go to `Auto Scaling Groups` --> click `First-AS-Group` --> `Automatic Scaling` --> `Add Policy`
 
-
 - Click `Add-Policy`;
-
 
 ```text
 Policy Type         : Target Tracking Policy
@@ -581,10 +579,11 @@ Scaling Policy Name : First Target Tracking
 Target value        : 60
 Instances need      : 200 sec
 ```
+
 Use the stress tool on EC2 Instances
 
 - Stop the stress tool with CTRL + C
 
-- Delete the Target Tracking  Policy
+- Delete the Target Tracking Policy
 
 - Delete Auto-scaling group and Load Balancer
