@@ -42,6 +42,7 @@ Each folder corresponds to a hands-on exercise:
 📁 VPC_1
 📁 VPC_2
 📁 VPC_3
+📁 VPC_4
 📁 Cloudwatch
 📁 Route_53_1
 📁 Route_53_2
@@ -127,8 +128,7 @@ Each hands-on includes:
 | 29  | SNS & SQS             | [SNS-SQS](./SNS-SQS)                               |
 | 30  | Boto3                 | [Boto3](./Boto3)                                   |
 | 31  | CloudFormation Sample | [Cloud_Formation_Sample](./Cloud_Formation_Sample) |
-| 32  | CloudFront            | [Cloud_Front](./Cloud_Front)                       |
-| 33  | JSON & YAML           | [JSON_YAML](./JSON_YAML)                           |
+| 33  | CloudFront            | [Cloud_Front](./Cloud_Front)                       |
 | 34  | Lambda & API          | [Lambda_API](./Lambda_API)                         |
 
 ---
