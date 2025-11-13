@@ -107,8 +107,8 @@ Each hands-on includes:
 | 08  | S3 - Part 1           | [S3_1](./S3_1)                                     |
 | 09  | ASG-LT                | [ASG-LT](./ASG-LT)                                 |
 | 10  | Auto Scaling          | [Auto_Scaling](./Auto_Scaling)                     |
-| 11  | EFS                   | [EFS](./EFS)                                       |
-| 12  | S3 - Part 2           | [S3_2](./S3_2)                                     |
+| 11  | S3 - Part 2           | [S3_2](./S3_2)                                     |
+| 12  | EFS                   | [EFS](./EFS)                                       |
 | 13  | AWS CLI               | [CLI](./CLI)                                       |
 | 14  | Database RDS          | [Database_RDS](./Database_RDS)                     |
 | 15  | MariaDB               | [MariaDB](./MariaDB)                               |
