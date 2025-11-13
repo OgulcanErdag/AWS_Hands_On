@@ -10,7 +10,7 @@
 
 ## Learning Outcomes
 
-At the end of the this hands-on training, students will be able to;
+At the end of this hands-on training, students will be able to;
 
 - installing CLI on Windows, Linux or MAC O/S
 
@@ -22,7 +22,7 @@ At the end of the this hands-on training, students will be able to;
 
 ## Outline
 
-- Part 1 - Installation
+- Part 1 - InstallationQ
 
 - Part 2 - Configuration
 
@@ -357,20 +357,20 @@ aws ssm get-parameters --names /aws/service/ami-amazon-linux-latest/al2023-ami-k
 aws ssm get-parameters --names /aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64 --query 'Parameters[0].[Value]' --output text
 ```
 
-- For the gitbash - (Gitbash can not run ssm-paramreter command so try this option)
+- For the Git Bash - (Git Bash can not run ssm-paramreter command so try this option)
 
 ```bash
-aws ssm get-parameters --names "//aws\service\ami-amazon-linux-latest\al2023-ami-kernel-default-x86_64"aw --region us-east-1 --query "Parameters[0].Value" --output text
+aws ssm get-parameters --names "/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64" --region us-east-1 --query "Parameters[0].Value" --output text
 ```
 
 - Launching EC2 instance with latest AL2023 AMI.
 
 ```
 aws ec2 run-instances \
-   --image-id $(aws ssm get-parameters --names /aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64 --query \
-               'Parameters[0].[Value]' --output text) \
+   --image-id $(aws ssm get-parameters --names /aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64 \
+   --query "Parameters[0].Value" --output text) \
    --count 1 \
-   --key-name aws\
+   --key-name aws \
    --instance-type t3.micro
 ```
 
