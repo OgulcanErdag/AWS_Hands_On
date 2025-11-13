@@ -31,9 +31,9 @@ Each folder corresponds to a hands-on exercise:
 📁 JSON_YAML
 📁 Load_Balancing
 📁 S3_1
-📁 ASG-LT
 📁 S3_2
 📁 CLI
+📁 CFN-ASG-LT
 📁 EFS
 📁 Database_RDS
 📁 MariaDB
@@ -105,30 +105,32 @@ Each hands-on includes:
 | 07  | Load Balancing        | [Load_Balancing](./Load_Balancing)                 |
 | 08  | S3 - Part 1           | [S3_1](./S3_1)                                     |
 | 09  | ASG-LT                | [ASG-LT](./ASG-LT)                                 |
-| 10  | S3 - Part 2           | [S3_2](./S3_2)                                     |
-| 11  | AWS CLI               | [CLI](./CLI)                                       |
+| 10  | Auto Scaling          | [Auto_Scaling](./Auto_Scaling)                     |
+| 11  | S3 - Part 2           | [S3_2](./S3_2)                                     |
 | 12  | EFS                   | [EFS](./EFS)                                       |
-| 13  | Database RDS          | [Database_RDS](./Database_RDS)                     |
-| 14  | MariaDB               | [MariaDB](./MariaDB)                               |
-| 15  | DB Restore SS PiT     | [DB_Restore_SS_PiT](./DB_Restore_SS_PiT)           |
-| 16  | DynamoDB              | [DynamoDB](./DynamoDB)                             |
-| 17  | VPC - Part 1          | [VPC_1](./VPC_1)                                   |
-| 18  | VPC - Part 2          | [VPC-2](./VPC_2)                                   |
-| 19  | VPC - Part 3          | [VPC-3](./VPC_3)                                   |
-| 20  | CloudWatch            | [Cloudwatch](./Cloudwatch)                         |
-| 21  | Route 53 - Part 1     | [Route_53_1](./Route_53_1)                         |
-| 22  | Route 53 - Part 2     | [Route_53_2](./Route_53_2)                         |
-| 23  | VPC - Part 4          | [VPC_4](./VPC_4)                                   |
-| 24  | CloudFront            | [CloudFront](./CloudFront)                         |
-| 25  | Lambda & API Gateway  | [Lambda-APIGW](./Lambda-APIGW)                     |
-| 26  | Elastic Beanstalk     | [Elastic_Beanstalk](./Elastic_Beanstalk)           |
-| 27  | SNS & SQS             | [SNS-SQS](./SNS-SQS)                               |
-| 28  | Boto3                 | [Boto3](./Boto3)                                   |
-| 29  | CloudFormation Sample | [Cloud_Formation_Sample](./Cloud_Formation_Sample) |
-| 30  | CloudFront            | [Cloud_Front](./Cloud_Front)                       |
-| 31  | DynamoDB              | [DynamoDB](./DynamoDB)                             |
-| 32  | JSON & YAML           | [JSON_YAML](./JSON_YAML)                           |
-| 33  | Lambda & API          | [Lambda_API](./Lambda_API)                         |
+| 13  | AWS CLI               | [CLI](./CLI)                                       |
+| 14  | CFN ASG ALB LT        | [CFN-ASG-ALB-LT](./CFN-ASG-ALB-LT)                 |
+| 15  | Database RDS          | [Database_RDS](./Database_RDS)                     |
+| 16  | MariaDB               | [MariaDB](./MariaDB)                               |
+| 17  | DB Restore SS PiT     | [DB_Restore_SS_PiT](./DB_Restore_SS_PiT)           |
+| 18  | DynamoDB              | [DynamoDB](./DynamoDB)                             |
+| 19  | VPC - Part 1          | [VPC_1](./VPC_1)                                   |
+| 20  | VPC - Part 2          | [VPC-2](./VPC_2)                                   |
+| 21  | VPC - Part 3          | [VPC-3](./VPC_3)                                   |
+| 22  | CloudWatch            | [Cloudwatch](./Cloudwatch)                         |
+| 23  | Route 53 - Part 1     | [Route_53_1](./Route_53_1)                         |
+| 24  | Route 53 - Part 2     | [Route_53_2](./Route_53_2)                         |
+| 25  | VPC - Part 4          | [VPC_4](./VPC_4)                                   |
+| 26  | CloudFront            | [CloudFront](./CloudFront)                         |
+| 27  | Lambda & API Gateway  | [Lambda-APIGW](./Lambda-APIGW)                     |
+| 28  | Elastic Beanstalk     | [Elastic_Beanstalk](./Elastic_Beanstalk)           |
+| 29  | SNS & SQS             | [SNS-SQS](./SNS-SQS)                               |
+| 30  | Boto3                 | [Boto3](./Boto3)                                   |
+| 31  | CloudFormation Sample | [Cloud_Formation_Sample](./Cloud_Formation_Sample) |
+| 32  | CloudFront            | [Cloud_Front](./Cloud_Front)                       |
+| 33  | DynamoDB              | [DynamoDB](./DynamoDB)                             |
+| 34  | JSON & YAML           | [JSON_YAML](./JSON_YAML)                           |
+| 35  | Lambda & API          | [Lambda_API](./Lambda_API)                         |
 
 ---
 
