@@ -117,10 +117,10 @@ Each hands-on includes:
 | 19  | VPC - Part 1          | [VPC_1](./VPC_1)                                   |
 | 20  | VPC - Part 2          | [VPC-2](./VPC_2)                                   |
 | 21  | VPC - Part 3          | [VPC-3](./VPC_3)                                   |
-| 22  | CloudWatch            | [Cloudwatch](./Cloudwatch)                         |
-| 23  | Route 53 - Part 1     | [Route_53_1](./Route_53_1)                         |
-| 24  | Route 53 - Part 2     | [Route_53_2](./Route_53_2)                         |
-| 25  | VPC - Part 4          | [VPC_4](./VPC_4)                                   |
+| 22  | VPC - Part 4          | [VPC_4](./VPC_4)                                   |
+| 23  | CloudWatch            | [Cloudwatch](./Cloudwatch)                         |
+| 24  | Route 53 - Part 1     | [Route_53_1](./Route_53_1)                         |
+| 25  | Route 53 - Part 2     | [Route_53_2](./Route_53_2)                         |
 | 26  | CloudFront            | [CloudFront](./CloudFront)                         |
 | 27  | Lambda & API Gateway  | [Lambda-APIGW](./Lambda-APIGW)                     |
 | 28  | Elastic Beanstalk     | [Elastic_Beanstalk](./Elastic_Beanstalk)           |
@@ -128,9 +128,8 @@ Each hands-on includes:
 | 30  | Boto3                 | [Boto3](./Boto3)                                   |
 | 31  | CloudFormation Sample | [Cloud_Formation_Sample](./Cloud_Formation_Sample) |
 | 32  | CloudFront            | [Cloud_Front](./Cloud_Front)                       |
-| 33  | DynamoDB              | [DynamoDB](./DynamoDB)                             |
-| 34  | JSON & YAML           | [JSON_YAML](./JSON_YAML)                           |
-| 35  | Lambda & API          | [Lambda_API](./Lambda_API)                         |
+| 33  | JSON & YAML           | [JSON_YAML](./JSON_YAML)                           |
+| 34  | Lambda & API          | [Lambda_API](./Lambda_API)                         |
 
 ---
 
