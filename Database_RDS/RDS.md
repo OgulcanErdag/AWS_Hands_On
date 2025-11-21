@@ -25,8 +25,8 @@ At the end of the this hands-on training, students will be able to;
 - First, create Security Group for RDS service. Select EC2 dashboard. Select Security Groups from the left-hand menu.
 
 ```text
-Security Group Name: clarusway_db_sg
-Description: clarusway_db_sg
+Security Group Name: company_db_sg
+Description: company_db_sg
 VPC: Default
 Inbound Rules:
     - Type: MYSQL/AURORA ---> Source: MyIP
@@ -79,7 +79,7 @@ Burstable classes (includes t classes) : db.t3.micro
 Storage type              : ssd
 Storage size              : default 20GiB
 Storage autoscaling       : default
-Maximum storage threshold : 22 
+Maximum storage threshold : 22
 ```
 
 - Connectivity
@@ -91,7 +91,7 @@ Click Additional Connectivity Configuration;
 
 Subnet group                  : default
 *Publicly accessible          : ***Yes
-Existing VPC security groups  : Select security group named clarusway_db_sg
+Existing VPC security groups  : Select security group named company_db_sg
 Availability Zone             : No preference
 Database port                 : 3306
 ```
@@ -105,7 +105,7 @@ DB Authentication: Password authentication
 - Additional configuration
 
 ```text
-Initial DB name                   : clarusway
+Initial DB name                   : company
 DB parameter group & option group : default
 Automatic backups                 : enable
 Backup retention period           : 7 days (Explain how)
@@ -122,7 +122,7 @@ Deletion protection: *Enabled
 ```
 
 - Estimated monthly costs
-Show that when you select `production` instead of `Free Tier Template` it charges you.
+  Show that when you select `production` instead of `Free Tier Template` it charges you.
 
 - Click `Create Database` button
 
@@ -145,13 +145,13 @@ On the page opened, we'll set up a new connection:
 ```text
 1. Connection Name   : first connection.
 
-2. Host Name         : Paste the endpoint of the database that you have copied 
+2. Host Name         : Paste the endpoint of the database that you have copied
                        and leave the port as is, 3306
 
 3. Username          : Here we enter the user name that we determined while creating the DB instance.
                        So we enter "admin" as a username.
 
-4. Password          : Click the `Store in Keychain/Vault` and enter the password 
+4. Password          : Click the `Store in Keychain/Vault` and enter the password
                        that you determined as "Pl123456789" while creating the DB Instance.
 
 5. Test Connection   : Before you connect DB Instance, test the connection whether it works properly.
@@ -164,14 +164,14 @@ On the page opened, we'll set up a new connection:
 
 ## Part 3 - Manipulating RDS Instance
 
-- Show `clarusway` database that is created together with RDS DB instance creation.
+- Show `company` database that is created together with RDS DB instance creation.
 
 - Create a new database from "Schema" tab
 
-- To modify the database, first, we need to create a new table. So, click the `clarusway` schema (or your schema's name). Right-click the `Table` option, then select the `Create Table`, and enter `Personal_Info_1` as table name.
+- To modify the database, first, we need to create a new table. So, click the `company` schema (or your schema's name). Right-click the `Table` option, then select the `Create Table`, and enter `Personal_Info_1` as table name.
 
 ```text
-1. First Row: Type "ID_number" into the first line. 
+1. First Row: Type "ID_number" into the first line.
               ID number is an integer, so the system automatically assign Integer value to the Datatype column.
               Explain the Primary Key, choose the ID_number as a Primary Key, and check the PK box.
 
@@ -191,7 +191,7 @@ Then a window that shows the review of the table pops up on the screen. Click Ap
 - Add another table via SQL command:
 
 ```sql
-CREATE TABLE `clarusway`.`Personal_Info_2` (
+CREATE TABLE `company`.`Personal_Info_2` (
   `ID_number` INT NOT NULL,
   `Name` VARCHAR(45) NULL,
   `Surname` VARCHAR(45) NULL,
@@ -206,56 +206,56 @@ CREATE TABLE `clarusway`.`Personal_Info_2` (
 - Add data to the "Personal_Info" table as shown below:
 
 ```sql
-INSERT INTO clarusway.Personal_Info_1
+INSERT INTO company.Personal_Info_1
 (ID_number, Name, Surname, Gender, Salary)
 VALUES
-('1234','Osvaldo','Clarusway','Male','45000'), 
-('56789','Guile','Clarusway','Male','55000'), 
-('007','Charlie','Clarusway','Male','50000'), 
-('432','Marcus','Clarusway','Male','55000'), 
-('324','Vincenzo','Clarusway','Male','65000'),
-('4587','Aslan','Clarusway','Male','40000'), 
-('43546','Serdar','Clarusway','Male','70000');
+('1234','Osvaldo','company','Male','45000'),
+('56789','Guile','company','Male','55000'),
+('007','Charlie','company','Male','50000'),
+('432','Marcus','company','Male','55000'),
+('324','Vincenzo','company','Male','65000'),
+('4587','Aslan','company','Male','40000'),
+('43546','Serdar','company','Male','70000');
 ```
 
 - Write a query to show all data in the `Personal_Info_1` table
 
 ```sql
-SELECT * FROM clarusway.Personal_Info_1;
+SELECT * FROM company.Personal_Info_1;
 ```
 
 - Write a query to show the personal whose salary are higher than 40K in the `Personal_Info_1` table
 
 ```sql
- SELECT * FROM clarusway.Personal_Info_1 WHERE salary > 40000;
+ SELECT * FROM company.Personal_Info_1 WHERE salary > 40000;
 ```
 
 ```sql
-INSERT INTO clarusway.Personal_Info_2
+INSERT INTO company.Personal_Info_2
 (ID_number, Name, Surname, Age, Department)
 VALUES
-('1234','Osvaldo','Clarusway','43','dev'), 
-('56789','Guile','Clarusway','34','dev'), 
-('007','Charlie','Clarusway','54','devops'), 
-('432','Marcus','Clarusway','32','test'), 
-('324','Vincenzo','Clarusway','25','dev'),
-('4587','Aslan','Clarusway','61','test'), 
-('43546','Serdar','Clarusway','37','devops');
+('1234','Osvaldo','company','43','dev'),
+('56789','Guile','company','34','dev'),
+('007','Charlie','company','54','devops'),
+('432','Marcus','company','32','test'),
+('324','Vincenzo','company','25','dev'),
+('4587','Aslan','company','61','test'),
+('43546','Serdar','company','37','devops');
 ```
 
 - Join example:
 
 ```sql
-SELECT 
-    p1.Name, 
-    p1.Surname, 
-    p2.Department, 
+SELECT
+    p1.Name,
+    p1.Surname,
+    p2.Department,
     p1.Salary
-FROM 
-    clarusway.Personal_Info_1 AS p1
-JOIN 
-    clarusway.Personal_Info_2 AS p2
-ON 
+FROM
+    company.Personal_Info_1 AS p1
+JOIN
+    company.Personal_Info_2 AS p2
+ON
     p1.ID_number = p2.ID_number;
 ```
 
@@ -263,18 +263,18 @@ ON
 
 ```sql
 
-SELECT 
-    p1.Name, 
-    p1.Surname, 
-    p2.Department, 
+SELECT
+    p1.Name,
+    p1.Surname,
+    p2.Department,
     p1.Salary
-FROM 
-    clarusway.Personal_Info_1 AS p1
-JOIN 
-    clarusway.Personal_Info_2 AS p2
-ON 
+FROM
+    company.Personal_Info_1 AS p1
+JOIN
+    company.Personal_Info_2 AS p2
+ON
     p1.ID_number = p2.ID_number
-WHERE 
+WHERE
     p1.Salary > 50000;
 
 ```
@@ -285,7 +285,7 @@ WHERE
 
 - Try to delete RDS and show that RDS instance again.
 
-   -Show that "Create final snapshot?" option should be "Unchecked"
+  -Show that "Create final snapshot?" option should be "Unchecked"
 
               "I acknowledge...." flag is "Checked"
 
