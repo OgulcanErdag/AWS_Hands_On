@@ -37,7 +37,7 @@ Each folder corresponds to a hands-on exercise:
 📁 EFS
 📁 Database_RDS
 📁 MariaDB
-📁 DB_RestoreFromSnapShot
+📁 DB_RestoreFromSnapshot
 📁 DynamoDB
 📁 VPC_1
 📁 VPC_2
@@ -112,7 +112,7 @@ Each hands-on includes:
 | 14  | CFN ASG ALB LT         | [CFN-ASG-ALB-LT](./CFN-ASG-ALB-LT)                 |
 | 15  | Database RDS           | [Database_RDS](./Database_RDS)                     |
 | 16  | MariaDB                | [MariaDB](./MariaDB)                               |
-| 17  | DB_RestoreFromSnapShot | [DB_RestoreFromSnapShot](./DB_RestoreFromSnapShot) |
+| 17  | DB_RestoreFromSnapshot | [DB_RestoreFromSnapshot](./DB_RestoreFromSnapshot) |
 | 18  | DynamoDB               | [DynamoDB](./DynamoDB)                             |
 | 19  | VPC - Part 1           | [VPC_1](./VPC_1)                                   |
 | 20  | VPC - Part 2           | [VPC-2](./VPC_2)                                   |
