@@ -372,7 +372,8 @@ Network         : Edit >>>>> Choose one of the default subnets
 Configure Storage : Advanced
 
   File systems  >>>> Edit >>>Add file system-------> FirstEFS
-  (Note down the mnt point "/nt/efs/fs1")m
+  (Note down the mnt point "/nt/efs/fs1")
+Automatically create and attach security groups : Unchecked
 Security Group  : EC2 SecGrp
 Tag             :
     Key         : Name

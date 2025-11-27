@@ -1,4 +1,4 @@
-![AWS Log](./aws.webp)
+![AWS Logo](./aws.webp)
 
 # ☁️ AWS Hands-On Practices
 
@@ -37,7 +37,7 @@ Each folder corresponds to a hands-on exercise:
 📁 EFS
 📁 Database_RDS
 📁 MariaDB
-📁 DB_Restore_SS_PiT
+📁 DB_RestorefromSnapShot
 📁 DynamoDB
 📁 VPC_1
 📁 VPC_2
@@ -94,41 +94,41 @@ Each hands-on includes:
 
 ## 🧾 Progress Overview
 
-| No  | Topic                 | Folder                                             |
-| --- | --------------------- | -------------------------------------------------- |
-| 01  | EC2 Introduction      | [EC2_Introduction](./EC2_Introduction)             |
-| 02  | IAM                   | [IAM](./IAM)                                       |
-| 03  | NGINX Launch Template | [NGINX-Launch_Template](./NGINX-Launch_Template)   |
-| 04  | Volumes               | [Volumes](./Volumes)                               |
-| 05  | AMI & Snapshot        | [AMI_Snapshot](./AMI_Snapshot)                     |
-| 06  | JSON & YAML           | [JSON_YAML](./JSON_YAML)                           |
-| 07  | Load Balancing        | [Load_Balancing](./Load_Balancing)                 |
-| 08  | S3 - Part 1           | [S3_1](./S3_1)                                     |
-| 09  | ASG-LT                | [ASG-LT](./ASG-LT)                                 |
-| 10  | Auto Scaling          | [Auto_Scaling](./Auto_Scaling)                     |
-| 11  | S3 - Part 2           | [S3_2](./S3_2)                                     |
-| 12  | EFS                   | [EFS](./EFS)                                       |
-| 13  | AWS CLI               | [CLI](./CLI)                                       |
-| 14  | CFN ASG ALB LT        | [CFN-ASG-ALB-LT](./CFN-ASG-ALB-LT)                 |
-| 15  | Database RDS          | [Database_RDS](./Database_RDS)                     |
-| 16  | MariaDB               | [MariaDB](./MariaDB)                               |
-| 17  | DB Restore SS PiT     | [DB_Restore_SS_PiT](./DB_Restore_SS_PiT)           |
-| 18  | DynamoDB              | [DynamoDB](./DynamoDB)                             |
-| 19  | VPC - Part 1          | [VPC_1](./VPC_1)                                   |
-| 20  | VPC - Part 2          | [VPC-2](./VPC_2)                                   |
-| 21  | VPC - Part 3          | [VPC-3](./VPC_3)                                   |
-| 22  | VPC - Part 4          | [VPC_4](./VPC_4)                                   |
-| 23  | CloudWatch            | [Cloudwatch](./Cloudwatch)                         |
-| 24  | Route 53 - Part 1     | [Route_53_1](./Route_53_1)                         |
-| 25  | Route 53 - Part 2     | [Route_53_2](./Route_53_2)                         |
-| 26  | CloudFront            | [CloudFront](./CloudFront)                         |
-| 27  | Lambda & API Gateway  | [Lambda-APIGW](./Lambda-APIGW)                     |
-| 28  | Elastic Beanstalk     | [Elastic_Beanstalk](./Elastic_Beanstalk)           |
-| 29  | SNS & SQS             | [SNS-SQS](./SNS-SQS)                               |
-| 30  | Boto3                 | [Boto3](./Boto3)                                   |
-| 31  | CloudFormation Sample | [Cloud_Formation_Sample](./Cloud_Formation_Sample) |
-| 32  | CloudFront            | [Cloud_Front](./Cloud_Front)                       |
-| 33  | Lambda & API          | [Lambda_API](./Lambda_API)                         |
+| No  | Topic                  | Folder                                             |
+| --- | ---------------------- | -------------------------------------------------- |
+| 01  | EC2 Introduction       | [EC2_Introduction](./EC2_Introduction)             |
+| 02  | IAM                    | [IAM](./IAM)                                       |
+| 03  | NGINX Launch Template  | [NGINX-Launch_Template](./NGINX-Launch_Template)   |
+| 04  | Volumes                | [Volumes](./Volumes)                               |
+| 05  | AMI & Snapshot         | [AMI_Snapshot](./AMI_Snapshot)                     |
+| 06  | JSON & YAML            | [JSON_YAML](./JSON_YAML)                           |
+| 07  | Load Balancing         | [Load_Balancing](./Load_Balancing)                 |
+| 08  | S3 - Part 1            | [S3_1](./S3_1)                                     |
+| 09  | ASG-LT                 | [ASG-LT](./ASG-LT)                                 |
+| 10  | Auto Scaling           | [Auto_Scaling](./Auto_Scaling)                     |
+| 11  | S3 - Part 2            | [S3_2](./S3_2)                                     |
+| 12  | EFS                    | [EFS](./EFS)                                       |
+| 13  | AWS CLI                | [CLI](./CLI)                                       |
+| 14  | CFN ASG ALB LT         | [CFN-ASG-ALB-LT](./CFN-ASG-ALB-LT)                 |
+| 15  | Database RDS           | [Database_RDS](./Database_RDS)                     |
+| 16  | MariaDB                | [MariaDB](./MariaDB)                               |
+| 17  | DB_RestorefromSnapShot | [DB_RestorefromSnapShot](./DB_RestorefromSnapShot) |
+| 18  | DynamoDB               | [DynamoDB](./DynamoDB)                             |
+| 19  | VPC - Part 1           | [VPC_1](./VPC_1)                                   |
+| 20  | VPC - Part 2           | [VPC-2](./VPC_2)                                   |
+| 21  | VPC - Part 3           | [VPC-3](./VPC_3)                                   |
+| 22  | VPC - Part 4           | [VPC_4](./VPC_4)                                   |
+| 23  | CloudWatch             | [Cloudwatch](./Cloudwatch)                         |
+| 24  | Route 53 - Part 1      | [Route_53_1](./Route_53_1)                         |
+| 25  | Route 53 - Part 2      | [Route_53_2](./Route_53_2)                         |
+| 26  | CloudFront             | [CloudFront](./CloudFront)                         |
+| 27  | Lambda & API Gateway   | [Lambda-APIGW](./Lambda-APIGW)                     |
+| 28  | Elastic Beanstalk      | [Elastic_Beanstalk](./Elastic_Beanstalk)           |
+| 29  | SNS & SQS              | [SNS-SQS](./SNS-SQS)                               |
+| 30  | Boto3                  | [Boto3](./Boto3)                                   |
+| 31  | CloudFormation Sample  | [Cloud_Formation_Sample](./Cloud_Formation_Sample) |
+| 32  | CloudFront             | [Cloud_Front](./Cloud_Front)                       |
+| 33  | Lambda & API           | [Lambda_API](./Lambda_API)                         |
 
 ---
 
