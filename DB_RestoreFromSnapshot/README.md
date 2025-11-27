@@ -433,7 +433,7 @@ EXIT;
 ## ⚠️ **IMPORTANT WARNING for Free Tier Users**
 
 If you are using an **AWS Free Tier account**, you can only run **one RDS instance at a time**  
-(db.t3.micro or db.t2.micro depending on region).
+(db.t3.micro or db.t4.micro depending on region).
 
 When restoring a database **from a Manual Snapshot** or **Point in Time Recovery**,  
 AWS will try to create a **new RDS instance**.
