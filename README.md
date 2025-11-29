@@ -127,8 +127,7 @@ Each hands-on includes:
 | 29  | SNS & SQS              | [SNS-SQS](./SNS-SQS)                               |
 | 30  | Boto3                  | [Boto3](./Boto3)                                   |
 | 31  | CloudFormation Sample  | [Cloud_Formation_Sample](./Cloud_Formation_Sample) |
-| 32  | CloudFront             | [Cloud_Front](./Cloud_Front)                       |
-| 33  | Lambda & API           | [Lambda_API](./Lambda_API)                         |
+| 32  | Lambda & API           | [Lambda_API](./Lambda_API)                         |
 
 ---
 
