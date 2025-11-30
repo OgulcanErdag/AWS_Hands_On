@@ -122,7 +122,7 @@ Each hands-on includes:
 | 24  | Route 53 - Part 1      | [Route_53_1](./Route_53_1)                         |
 | 25  | Route 53 - Part 2      | [Route_53_2](./Route_53_2)                         |
 | 26  | CloudFront             | [CloudFront](./CloudFront)                         |
-| 27  | Lambda & API Gateway   | [Lambda-APIGW](./Lambda-APIGW)                     |
+| 27  | Lambda & API Gateway   | [Lambda-APIGW](./Lambda-API_GW)                    |
 | 28  | Elastic Beanstalk      | [Elastic_Beanstalk](./Elastic_Beanstalk)           |
 | 29  | SNS & SQS              | [SNS-SQS](./SNS-SQS)                               |
 | 30  | Boto3                  | [Boto3](./Boto3)                                   |
