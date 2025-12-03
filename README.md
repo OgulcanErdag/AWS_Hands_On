@@ -115,7 +115,7 @@ Each hands-on includes:
 | 17  | DB_RestoreFromSnapshot | [DB_RestoreFromSnapshot](./DB_RestoreFromSnapshot) |
 | 18  | DynamoDB               | [DynamoDB](./DynamoDB)                             |
 | 19  | VPC - Part 1           | [VPC-01_Basics](./VPC-01_Basics)                   |
-| 20  | VPC - Part 2           | [VPC-2](./VPC_2)                                   |
+| 20  | VPC - Part 2           | [VPC-02_Bastion-NAT](./VPC-02_Bastion-NAT)         |
 | 21  | VPC - Part 3           | [VPC-3](./VPC_3)                                   |
 | 22  | VPC - Part 4           | [VPC_4](./VPC_4)                                   |
 | 23  | CloudWatch             | [Cloudwatch](./Cloudwatch)                         |
