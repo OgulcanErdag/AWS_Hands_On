@@ -119,6 +119,8 @@ STEP 2: Create Nat Gateway
 ```bash
 Name                      : ondia-nat-gateway
 
+Availability-mode         : Zonal
+
 Subnet                    : ondia-az1b-public-subnet
 
 Elastic IP allocation ID  : First Elastic IP
