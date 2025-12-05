@@ -34,6 +34,8 @@ PS: For MAC, "Microsoft Remote Desktop" program should be installed on the compu
 ```bash
 Name                      : ondia-nat-gateway-2
 
+Availability-mode         : Zonal
+
 Subnet                    : ondia-az1a-public-subnet
 
 Elastic IP allocation ID  : Second Elastic IP
@@ -60,7 +62,7 @@ WARNING!!! ---> Be sure that NAT Gateway is in active status. Since the private 
 
 Security Group :
 Sec.Group Name : Private-Sec-Group
-Rules : TCP ---> 22 ---> Anywhere
+Rules : SSH ---> 22 ---> Anywhere
 HTTP ---> 80 ---> Anywhere
 
 ### E. Configure Private instance in 'ondia-az1a-private-subnet' of 'ondia-vpc-a'.

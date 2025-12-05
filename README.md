@@ -117,7 +117,7 @@ Each hands-on includes:
 | 19  | VPC - Part 1           | [VPC-01_Basics](./VPC-01_Basics)                     |
 | 20  | VPC - Part 2           | [VPC-02_Bastion-NAT](./VPC-02_Bastion-NAT)           |
 | 21  | VPC - Part 3           | [VPC-03_Peering-Endpoint](./VPC-03_Peering-Endpoint) |
-| 22  | VPC - Part 4           | [VPC_4](./VPC_4)                                     |
+| 22  | VPC - Part 4           | [VPC-04_LAMP-and-NACL](./VPC-04_LAMP-and-NACL)       |
 | 23  | CloudWatch             | [Cloudwatch](./Cloudwatch)                           |
 | 24  | Route 53 - Part 1      | [Route_53_1](./Route_53_1)                           |
 | 25  | Route 53 - Part 2      | [Route_53_2](./Route_53_2)                           |
