@@ -201,7 +201,7 @@ Tag             :
 
 - click create role
 
-```
+```text
 Trusted entity type: AWS Service
 use case : EC2
 Permissions Policies: AmazonS3FullAccess ---> Next
@@ -253,7 +253,7 @@ ssh ec2-user@[Your private EC2 private IP]
 
 - list the bucket in S3 and content of S3 bucket named "aws s3 ls "ondia-vpc-endpoint" via following command
 
-```
+```bash
 aws s3 ls
 aws s3 ls ondia-vpc-endpoint
 ```
@@ -264,7 +264,7 @@ aws s3 ls ondia-vpc-endpoint
 
 - Go to the terminal and try to connect again S3 bucket via following command
 
-```
+```bash
 aws s3 ls
 ```
 
