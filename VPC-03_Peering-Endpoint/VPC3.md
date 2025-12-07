@@ -142,6 +142,7 @@ Target ---> peering connection ---> select 'First Peering' ---> Save routes
 ```
 Destination: paste "default VPC" CIDR blok
 Target ---> peering connection ---> select 'First Peering' ---> Save routes
+Go to "Peering connections" select "First Peering" . "Action --> Accept request"
 ```
 
 - Go to windows EC2 named 'Windows public', write IP address on browser and show them to website with KEN..
