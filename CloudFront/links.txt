@@ -1,0 +1,26 @@
+ACM 
+1- https://aws.amazon.com/certificate-manager/
+2- AWS Certificate Manager public certificates
+https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request-public.html
+3- Quotas
+https://docs.aws.amazon.com/acm/latest/userguide/acm-limits.html
+1 - global aws infrastructure
+https://aws.amazon.com/about-aws/global-infrastructure/
+2 - cloud front
+https://aws.amazon.com/cloudfront/features/
+3 - Key differences between a website endpoint and a REST API endpoint
+https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteEndpoints.html
+****WEBSITE ENDPOINT
+https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteEndpoints.html
+4 - cloud front pricing and price class
+https://aws.amazon.com/cloudfront/pricing/pay-as-you-go/
+5 - INSPECT AIRPORT- EDGE LOCT:
+https://www.feitsui.com/en/article/3
+6 - Restrict access to an Amazon S3 origin
+https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html
+7 - Cloud front default cache time
+https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html
+8 - Pay for file invalidation FREE MAX INVALIDATIONS
+https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PayingForInvalidation.html?utm_source=chatgpt.com
+9 - Maximum TTL 
+https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/DownloadDistValuesCacheBehavior.html?utm_source=chatgpt.com
