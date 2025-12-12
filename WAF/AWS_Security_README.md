@@ -1,8 +1,8 @@
 # Hands-on Security WAF : Working with AWS WAF and Application Load Balancers
 
-!!!!Warning: This hands-on may charge you because of the resource we'll create. 
+!!!!Warning: This hands-on may charge you because of the resource we'll create.
 
-Purpose of this hands-on training is to get exposure to AWS WAF.  We'll cover how to attach WAF Web ACLs to an Application Load Balancer
+Purpose of this hands-on training is to get exposure to AWS WAF. We'll cover how to attach WAF Web ACLs to an Application Load Balancer
 and prevent undesired traffic getting through to servers behind the WAF.
 
 ## Learning Outcomes
@@ -26,7 +26,6 @@ At the end of the this hands-on training, students will be able to;
 - Part 3 - Create an ACL to block a single IP
 
 - Part 4 - Create an ACL to block repeated requests from the same IP
-
 
 ## Part 1 - Build an Application (Security Group, ALB, Web Servers)
 
@@ -67,6 +66,7 @@ Tag:
 - Auto-assign Public IP:        Enabled
 - User data:                    Paste the text from the script below
 ```
+
 ```bash
 #!/bin/bash -x
 
@@ -91,6 +91,7 @@ echo "<html>
 systemctl start httpd
 systemctl enable httpd
 ```
+
 ```text
 Storage:            select the default (Volume 1 (AMI Root) (8 GiB, EBS, General purpose SSD (gp2)))
 Tags:
@@ -110,6 +111,7 @@ Security Group:     Select the security group created above named ALB-EC2-SG
 - Click on 'Create Target Group'
 
 - **Basic Configuration**
+
 ```text
 Target Type:        Instances
 Target group name:  MyTargetGroup
@@ -119,6 +121,7 @@ Protocol Version:   HTTP1
 ```
 
 - **Health Checks**
+
 ```text
 Use Defaults
 ```
@@ -126,14 +129,13 @@ Use Defaults
 - Click Next
 
 - **Register Targets**
+
 ```text
 - Select the instance you created above
 - Click on 'Include as pending below'
 ```
 
 - Click 'Create target group'
-
-
 
 `### Step 4 - Create an Application Load Balancer:`
 
@@ -146,6 +148,7 @@ Use Defaults
 - Select 'Create' under Application Load Balancer
 
 - **Basic Configuration**
+
 ```text
 Load balancer name: MyLoadBalancer
 Scheme:             Internet Facing
@@ -153,17 +156,20 @@ IP Address Type:    IPV4
 ```
 
 - **Network Mapping**
+
 ```text
 VPC:                Select your default VPC (same as that selected for EC2 instance above)
 Mappings:           Select all availability zones
 ```
 
 - **Security Groups**
+
 ```text
 Security Groups:    Select the security group created above named ALB-EC2-SG (delete any others)
 ```
 
 - **Listeners and Routing**
+
 ```text
 Protocol:           HTTP
 Port:               80
@@ -171,7 +177,6 @@ Default Action:     Forward to MyTargetGroup (target group created above)
 ```
 
 - Click on Create Load Balancer
-
 
 `### Step 5 - Check that you can access your Web Server:`
 
@@ -182,7 +187,6 @@ Default Action:     Forward to MyTargetGroup (target group created above)
 - Select the load balancer DNS and enter the name into a browswer using http; i.e. http://load-balancer-dns-name
 
 - Both URLs should show you the same web page
-
 
 ## Part 2 - Add WAF Protection
 
@@ -195,6 +199,7 @@ Default Action:     Forward to MyTargetGroup (target group created above)
 - Click on "Create web ACL"
 
 - **Web ACL Details**
+
 ```text
 Name:               MyFirstWebAcl
 Description:        Protect web servers against threats
@@ -233,7 +238,6 @@ Region:             US East (N. Virginia)
 
 - Click on 'Cancel'
 
-
 `### Step 2 - Create an IP Set`
 
 - In a browser, go to the URL https://www.whatismyip.com/
@@ -247,6 +251,7 @@ Region:             US East (N. Virginia)
 - Click on 'Create IP Set'
 
 - **IP set details**
+
 ```text
 IP set name:        MyIPSet
 Description:        Block my IP
@@ -254,8 +259,8 @@ Region:             US East (N. Virginia)
 IP Version:         IPv4
 IP addresses:       Enter your IP address from above (add /32 at the end)
 ```
-- Click Create IP set
 
+- Click Create IP set
 
 `### Step 3 - Create a self-managed rule - Block your IP`
 
@@ -268,6 +273,7 @@ IP addresses:       Enter your IP address from above (add /32 at the end)
 - Click on "Create web ACL"
 
 - **Web ACL Details**
+
 ```text
 Name:               MyFirstWebAcl
 Description:        Protect web servers against threats
@@ -297,6 +303,7 @@ Region:             US East (N. Virginia)
 - Click 'Add my own rules and rule groups'
 
 - **Add my own rules and rule groups**
+
 ```text
 Rule Type:          IP set
 Name:               BlockMyIP
@@ -313,9 +320,9 @@ Action:             Block
 
 `### Step 4 - Test the IP Blocking Web ACL`
 
-- Copy the DNS address for your load balancer and enter it in a browser.  What happens?
+- Copy the DNS address for your load balancer and enter it in a browser. What happens?
 
-- Copy the DNS address for your EC2 server and enter it in a browser.  What happens?
+- Copy the DNS address for your EC2 server and enter it in a browser. What happens?
 
 - On the AWS WAF Console, select 'Web ACLs' and then click on 'MyFirstWebAcl'
 
@@ -327,8 +334,7 @@ Action:             Block
 
 - Go back to the AWS WAF main console page and select 'Web ACLs'
 
-- Select 'MyFirstWebAcl' and click 'Delete'.  Follow the instructions to delete.
-
+- Select 'MyFirstWebAcl' and click 'Delete'. Follow the instructions to delete.
 
 `### Step 5 - Create a self-managed rule - Rate Limit`
 
@@ -341,6 +347,7 @@ Action:             Block
 - Click on "Create web ACL"
 
 - **Web ACL Details**
+
 ```text
 Name:               RateLimitACL
 Description:        Protect web servers against repeated requests
@@ -370,6 +377,7 @@ Region:             US East (N. Virginia)
 - Click 'Add my own rules and rule groups'
 
 - **Add my own rules and rule groups**
+
 ```text
 Rule Type:          Rule builder
 Name:               HundredMaxAttempts
@@ -384,7 +392,6 @@ Rate limit:         100 (this means max of 100 requests in 5 minutes)
 - Under Default web ACL action for requests that don't match any rules, make sure you select 'Allow'
 
 - For the remaining pages, click 'Next' then click 'Create web ACL'
-
 
 `### Step 6 - Test the Rate Limit ACL`
 
@@ -406,6 +413,7 @@ Rate limit:         100 (this means max of 100 requests in 5 minutes)
     Value:                      Testing server
 - Security Group:               Select the security group created above named ALB-EC2-SG
 ```
+
 - Launch the EC2 instance with your key-pair
 
 - Connect to your instance via ssh
@@ -416,7 +424,7 @@ Rate limit:         100 (this means max of 100 requests in 5 minutes)
 #!/bin/bash
 for x in {1..200}
 do
-        output=$(curl -s http://betul-asg-cfn-19-1548097776.us-east-1.elb.amazonaws.com/ | grep h1)
+        output=$(curl -s http://ogulcan-asg-cfn-13-1548097776.us-east-1.elb.amazonaws.com/ | grep h1)
         echo $x - $output
         sleep 0.5
 done
@@ -434,8 +442,6 @@ done
 
 - Explore the AWS WAF Dashboard for this WebACL
 
-
-
 `### Step 7 - Delete your resources!`
 
 - Delete the Load Balancer
@@ -445,9 +451,3 @@ done
 - Delete the WAF Web ACL
 
 - Delete BOTH EC2 Instances
-
-
-
-
-
-
