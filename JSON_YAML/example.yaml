@@ -4,26 +4,22 @@
 key: value
 instructor: paul
 ---
-
 # List of strings
 - paul
 - osvaldo
 - james
 
 ---
-
 [paul, osvaldo, james]
-
 ---
-instructors: 
- - paul
- - osvaldo
- - james
-
+instructors:
+  - paul
+  - osvaldo
+  - james
 ---
 # An employee record
 
-instructor: 
+instructor:
   name: paul
   job: solutions-arct
   department: aws
@@ -43,33 +39,31 @@ instructors:
     age: 40
 
 ---
-
--  instructor1: 
-      name: paul
-      job: solutions-arct
-      department: aws
-      age: 37
--  instructor2: 
-      name: james
-      job: devops-eng
-      department: 
-        - devops
-        - aws
-      age: 36
+- instructor1:
+    name: paul
+    job: solutions-arct
+    department: aws
+    age: 37
+- instructor2:
+    name: james
+    job: devops-eng
+    department:
+      - devops
+      - aws
+    age: 36
 ---
 # Another object format
 
 instructor:
-  {name: callahan, job: devops-eng, department: [aws, devops], age: 40}
+  { name: callahan, job: devops-eng, department: [aws, devops], age: 40 }
 
-...
-
+---
 #Multiple lines values
 
-example1: |  # Keeps the block
+example1: | # Keeps the block
   paul
   Solutions Architect
-  Ondia LLC.
+  Company LLC.
 example2: > # This text will be a sentence
   This
   text

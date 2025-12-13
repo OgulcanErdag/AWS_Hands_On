@@ -150,7 +150,7 @@ DB Authentication: Password authentication
 - Additional configuration
 
 ```text
-Initial DB name                   : ondia
+Initial DB name                   : company
 DB parameter group & option group : default
 Automatic backups                 : enable
 Backup retention period           : 7 days (Explain how)
@@ -185,10 +185,10 @@ SHOW DATABASES;
 - Choose a database
 
 ```sql
-USE ondia;
+USE company;
 ```
 
-- Show tables within the `ondia` db.
+- Show tables within the `company` db.
 
 ```sql
 SHOW TABLES;
@@ -198,7 +198,7 @@ SHOW TABLES;
 
 ### STEP 3 - Creating Tables in RDS DB Instance and Populating with Data
 
-- Create a table named `offices` in ondia database
+- Create a table named `offices` in company database
 
 ```sql
 CREATE TABLE `offices` (
@@ -210,7 +210,7 @@ CREATE TABLE `offices` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 ```
 
-- Insert sample data into the table named `offices` in ondia database
+- Insert sample data into the table named `offices` in company database
 
 ```sql
 INSERT INTO `offices` VALUES (1,'03 Reinke Trail','Cincinnati','OH');
@@ -225,7 +225,7 @@ INSERT INTO `offices` VALUES (9,'16862 Westend Hill','Knoxville','TN');
 INSERT INTO `offices` VALUES (10,'4 Bluestem Parkway','Savannah','GA');
 ```
 
-- Create a table named `employees`in ondia database
+- Create a table named `employees`in company database
 
 ```sql
 CREATE TABLE `employees` (
@@ -242,7 +242,7 @@ CREATE TABLE `employees` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 ```
 
-- Insert sample data into the table named `employees`in ondia database
+- Insert sample data into the table named `employees`in company database
 
 ```sql
 INSERT INTO `employees` VALUES (37270,'Yovonnda','Magrannell','Executive Secretary',63996,NULL,10);
@@ -285,7 +285,7 @@ SELECT * FROM offices;
 SELECT * FROM employees;
 ```
 
-- Close the `ondia` database terminal.
+- Close the `company` database terminal.
 
 ```sql
 EXIT;
@@ -326,10 +326,10 @@ mysql -h RDS_ENDPOINT -u admin -p
 - Choose a database again
 
 ```sql
-USE ondia;
+USE company;
 ```
 
-- Delete `employees` who earns salary above `$70000` from the `ondia` db on `root-RDS`.
+- Delete `employees` who earns salary above `$70000` from the `company` db on `root-RDS`.
 
   - Show all data in `employee` table.
 
@@ -406,13 +406,13 @@ USE ondia;
 mysql -h [***restored-from-man-snapshot RDS endpoint] -u admin -p
 ```
 
-- Choose a database (`ondia` db) to work with.
+- Choose a database (`company` db) to work with.
 
 ```sql
-USE ondia;
+USE company;
 ```
 
-- Show tables within the `ondia` db.
+- Show tables within the `company` db.
 
 ```sql
 SHOW TABLES;
@@ -475,10 +475,10 @@ mysql -h [root-RDSENDPOINT] -u admin -p
 - Choose a database
 
 ```sql
-USE ondia;
+USE company;
 ```
 
-- This time, delete `employees` who earn salary above `$60000` from the `ondia` db on `root-RDS`.
+- This time, delete `employees` who earn salary above `$60000` from the `company` db on `root-RDS`.
 
 ```sql
 DELETE FROM employees WHERE salary > 60000;
@@ -535,7 +535,7 @@ there are only 4 records
   Password authentication
 
   Additional configuration
-  - Initial database name:ondia
+  - Initial database name:company
   - DB parameter group, Backup, Log exports, IAM Role, Maintenance, Deletion Protection
     Keep it as is
 
@@ -547,7 +547,7 @@ there are only 4 records
 - Log into the RDS instance (`restored-from-point-in-time-RDS`) as `admin` using the password defined `Pl123456789`
 
 ```bash
-mysql -h [DNS Name of point in time recovery RDS Instance] -u admin -p ondia
+mysql -h [DNS Name of point in time recovery RDS Instance] -u admin -p company
 ```
 
 - Show that deleted records of employees are back in `restored-from-point-in-time-RDS`.
@@ -558,22 +558,22 @@ SELECT * FROM employees ORDER BY salary ASC;
 
 ## Part 5 - Dumping and Migrating Database
 
-- Show that some information are absent in the `ondia` database on RDS DB instance (`root-RDS`). We need to recover absent data from snapshot via dumping.
+- Show that some information are absent in the `company` database on RDS DB instance (`root-RDS`). We need to recover absent data from snapshot via dumping.
 
 - Go to MariaDB Client instance by connecting with SSH.
 
-- Back up the `ondia` db from RDS DB instance (`restored-from-point-in-time-RDS`) to the file named `backup.sql` on EC2 instance.
+- Back up the `company` db from RDS DB instance (`restored-from-point-in-time-RDS`) to the file named `backup.sql` on EC2 instance.
 
 ```bash
-mysqldump -h [restored-from-point-in-time-RDS endpoint] -u admin -p ondia > backup.sql
+mysqldump -h [restored-from-point-in-time-RDS endpoint] -u admin -p company > backup.sql
 ```
 
 - Show `backup.sql` file with `ls` command.
 
-- Restore the backup of `ondia` db on to the MySQL DB Server (`root-RDS` instance) using `backup.sql` file
+- Restore the backup of `company` db on to the MySQL DB Server (`root-RDS` instance) using `backup.sql` file
 
 ```bash
-mysql -h [root-RDS endpoint] -u admin -p ondia < backup.sql
+mysql -h [root-RDS endpoint] -u admin -p company < backup.sql
 ```
 
 - Connect to the `root-RDS` DB
@@ -582,11 +582,11 @@ mysql -h [root-RDS endpoint] -u admin -p ondia < backup.sql
 mysql -h [root-RDS endpoint] -u admin -p;
 ```
 
-- Show that all records are replicated in the `ondia` database.
+- Show that all records are replicated in the `company` database.
 
 ```sql
 SHOW DATABASES;
-USE ondia;
+USE company;
 SELECT * FROM employees;
 ```
 
