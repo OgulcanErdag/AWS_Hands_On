@@ -321,7 +321,7 @@ Stage Name: dev
 - Entering the Invoke URL into the web browser adding "/city"and show the generated city with refreshing the page in the web browser.
   ""https://b8pize8i6e.execute-api.us-east-1.amazonaws.com/dev/city""
 
-## Opsional:
+## Optional:
 
 Lamda with logs:
 
