@@ -264,6 +264,7 @@ Settings            :
   - Name: FirstAPI
   - Description: test first api
   - Endpoint Type: Regional
+  - Security policy: TLS_1_0
   - Click 'Create API'
 ```
 
