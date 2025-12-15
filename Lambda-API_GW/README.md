@@ -112,7 +112,7 @@ s3_client = boto3.client("s3")
 
 
 def lambda_handler(event, context):
-   destination_bucket_name = 'ondia13-tr.destination.lambda'
+   destination_bucket_name = 'ogi-ondia13-tr.destination.lambda'
 
    # event contains all information about uploaded object
    print("Event :", event)
