@@ -14,8 +14,6 @@ At the end of the this hands-on training, students will be able to;
 
 - Create a lambda function, that generates a random city and trigger it with API Gateway.
 
-
-
 ## Outline
 
 - Part 1 - Prep - Creating AWS S3 Bucket
@@ -23,8 +21,6 @@ At the end of the this hands-on training, students will be able to;
 - Part 2 - Creating a Lambda Function and Setting a Trigger Event
 
 - Part 3 - Create a Lambda Function with API Gateway
-
-
 
 ## Part 1 - Prep - Creating a S3 Bucket
 
@@ -43,6 +39,7 @@ Tagging                     : 0 Tags
 Default encryption          : None
 Object-level logging        : Disabled
 ```
+
 PS: Please, do not forget to select "US East (N.Virginia)" as Region
 
 - Create another bucket of `ondia.destination.lambda` with following properties,
@@ -59,7 +56,6 @@ Object-level logging        : Disabled
 
 PS: Please, do not forget to select "US East (N.Virginia)" as Region
 
-
 ## Part 2 - Create a Lambda Function and Trigger Event
 
 STEP 1: Create IAM Role:
@@ -71,7 +67,7 @@ Go to IAM page.
 ```text
 Type of Trusted Entity      : AWS Service
 Use Case                    : Lambda
-Permissions                 : AmazonS3FullAccess, AWSLambdaBasicExecutionRole 
+Permissions                 : AmazonS3FullAccess, AWSLambdaBasicExecutionRole
 Name:                       : Lambda.S3.Replica
 ```
 
@@ -80,17 +76,19 @@ STEP 2: Create Lambda Function
 - Go to Lambda Service on AWS Console
 
 - Functions ----> Create Lambda function
+
 ```text
 1. Select Author from scratch
   Name: s3Duplicate
   Runtime: Python 3.10
   Role: Lambda.S3.Replica
-  
+
 ```
 
 STEP 3: Setting Trigger Event
 
-- Go to Configuration sub-menu and click AddTrigger on Designer  
+- Go to Configuration sub-menu and click AddTrigger on Designer
+
 ```
 Trigger Configuration : S3
 
@@ -141,7 +139,6 @@ def lambda_handler(event, context):
 
 STEP 5: Testing S3 Bucket Duplication
 
-
 - Go to S3 Bucket Service
 
 - Select S3 bucket named 'ondia.source.lambda'
@@ -152,8 +149,7 @@ STEP 5: Testing S3 Bucket Duplication
 
 - You can show some other functions if have enough time (Optional)
 
-
-- Example 2: 
+- Example 2:
 
 ```python
 from random import randint
@@ -172,14 +168,13 @@ def lambda_handler(event, context):
 
 ```
 
-For testing: 
+For testing:
 
 {
- 
+
 }
 
-
-- Example 3: 
+- Example 3:
 
 ```python
 
@@ -194,21 +189,20 @@ def lambda_handler(event, context):
  return romanvalue
 ```
 
-For testing: 
+For testing:
 
 {
-  "num": 2546
+"num": 2546
 }
 
-
 ## Part 3 - Create a Lambda Function with API Gateway
-
 
 STEP 1: Create Lambda Function
 
 - Go to Lambda Service on AWS Console
 
 - Functions ----> Create Lambda function
+
 ```text
 1. Select Author from scratch
   Name: RandomCityGenerator
@@ -232,14 +226,13 @@ def lambda_handler(event, context):
     return mylist[myNumber]
 
 ```
+
 - Click "DEPLOY" button
-
-
-
 
 STEP 2: Testing your function - Create test event
 
 Click 'Test' button and opening page Configure test events
+
 ```
 Select: Create new test event
 Event template: Hello World
@@ -251,8 +244,8 @@ Input test event as;
 Click 'Create'
 Click 'Test'
 ```
-You will see the message Execution result: succeeded(logs) and a random city in a box with a dotted line.
 
+You will see the message Execution result: succeeded(logs) and a random city in a box with a dotted line.
 
 STEP 3 : Create New 'API'
 
@@ -261,6 +254,7 @@ STEP 3 : Create New 'API'
 - Click "Create API"
 
 - Select REST API ----> Build
+
 ```
 
 Choose the protocol : REST
@@ -279,7 +273,8 @@ STEP 4 : Exposing Lambda via API Gateway
 
 - Click on 'Create Resource'
 
-   Resource details
+  Resource details
+
   - Proxy resource: Leave as is (off)
   - Resource Path: /
   - Resource Name: city
@@ -314,25 +309,27 @@ STEP 5: Testing Lambda via API Gateway
 STEP 6 : Deploy API
 
 - Click Deploy API
+
 ```
 Stage: [New Stage]
 Stage Name: dev
 ```
 
 - Get the invoke URL on stage details like;
-"https://b8pize8i6e.execute-api.us-east-1.amazonaws.com/dev" and note it down somewhere.
+  "https://b8pize8i6e.execute-api.us-east-1.amazonaws.com/dev" and note it down somewhere.
 
 - Entering the Invoke URL into the web browser adding "/city"and show the generated city with refreshing the page in the web browser.
-""https://b8pize8i6e.execute-api.us-east-1.amazonaws.com/dev/city""
+  ""https://b8pize8i6e.execute-api.us-east-1.amazonaws.com/dev/city""
 
 ## Opsional:
 
 Lamda with logs:
+
 ```bash
 import logging
 from random import randint
 
-# Logger ayarı
+
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
@@ -366,4 +363,3 @@ def lambda_handler(event, context):
         "body": f"Roman Representation of the {number} is {romanvalue}"
     }
 ```
-
