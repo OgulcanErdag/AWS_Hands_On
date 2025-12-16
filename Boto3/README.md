@@ -8,27 +8,27 @@
 
 ## Part 1 - Installation and Configuration
 
-- To install Boto3, open your terminal (Commands below works also for Command Prompt-Windows), and type the code below for the latest version.
+- To install Boto3, open your terminal Commands below also work for Command Prompt (Windows), and type the code below for the latest version.
 
-```text
+```bash
 pip install boto3
 ```
 
 - If you are using Python3, try:
 
-```text
+```bash
 pip3 install boto3
 ```
 
-- To be able to use Boto3, you need AWS Credential (Access Key and Secret Key). If you have AWS CLI installed and configured you don't need to do anything. If you don't, create '.aws' directory under home (~), and then create config and credentials file with the necessary data in.
+- To be able to use Boto3, you need AWS credentials (Access Key and Secret Key). If you have AWS CLI installed and configured you don't need to do anything. If you don't, create '.aws' directory under home (~), and then create config and credentials file with the necessary data.
 
-```text
+```bash
 aws configure
 ```
 
 - Then enter the credentials:
 
-```text
+```bash
 AWS Access Key ID [****************EMOJ]:
 AWS Secret Access Key [****************/aND]:
 Default region name [us-east-1]:
@@ -41,7 +41,7 @@ Default output format [yaml]:
 
 - To be able to use Boto3, first you need to import it (import boto3), then you can type other commands regarding it. Create a file called s3list.py and put the code below in it.
 
-```text
+```python
 import boto3
 
 # Use Amazon S3
@@ -56,7 +56,7 @@ for bucket in s3.buckets.all():
 
 Create a file a called s3cb.py and put the code below in it.
 
-```text
+```python
 import boto3
 
 # Use Amazon S3
@@ -80,7 +80,7 @@ for bucket in s3.buckets.all():
 
 - Create a file a called s3put.py and put the code below in it.
 
-```text
+```python
 import boto3
 
 # Use Amazon S3
@@ -97,16 +97,16 @@ s3.Bucket('ogi-boto3-bucket').put_object(Key='test.jpg', Body=data)
 
 - Create a file a called ec2launch.py and put the code below in it to launch an Ubuntu instance. You may change the instance ID to create different types of instances.
 
-```text
+```python
 import boto3
 ec2 = boto3.resource('ec2')
 
 # create a new EC2 instance
 instances = ec2.create_instances(
-     ImageId='ami-068c0051b15cdb816', # ubuntu ami id
+     ImageId='ami-068c0051b15cdb816', # Amazon 2023 ami id
      MinCount=1,
      MaxCount=1,
-     InstanceType='t2.micro',
+     InstanceType='t3.micro',
      KeyName='yourkeypair without .pem here' # put your keypair
  )
 ```
@@ -115,7 +115,7 @@ instances = ec2.create_instances(
 
 - Create a file a called ec2stop.py and put the code below in it to stop EC2 instance via boto3.
 
-```text
+```python
 import boto3
 ec2 = boto3.resource('ec2')
 ec2.Instance('your InstanceID').stop() # put your instance id
@@ -123,7 +123,7 @@ ec2.Instance('your InstanceID').stop() # put your instance id
 
 - Create a file a called ec2terminate.py and put the code below in it to terminate EC2 instance via boto3.
 
-```text
+```python
 import boto3
 ec2 = boto3.resource('ec2')
 ec2.Instance('your InstanceID').terminate() # put your instance id
