@@ -6,13 +6,13 @@
 
 - Click `Create Application`.
 
-- Keep `Web server environment`. 
+- Keep `Web server environment`.
 
-- Enter your application name `MySampleApp`.  (You can also add Application tags if you need.)
+- Enter your application name `MySampleApp`. (You can also add Application tags if you need.)
 
 - Keep `MySampleApp-env` for the Environment name.
 
-- Select `PHP` for Platform, `PHP 8.1 running on 64bit Amazon Linux 2` for Platform Branch and `(Recommended)` for Platform Version.
+- Select `PHP` for Platform, `PHP 8.4 running on 64bit Amazon Linux 2023` for Platform Branch and `(Recommended)` for Platform Version.
 
 - Select `Upload your code` for Application code and select `Local file`.
 
@@ -21,7 +21,8 @@
 - Select `High availability` for `Presets` and hit `Next`.
 
 - For Service Role `Create and use new service role`, then select your EC2 Key Pair, for `EC2 instance profile` go to IAM and create
-a new role named `aws-elasticbeanstalk-ec2-role` with the policies below. While creating role choose `EC2`as trusted service, refresh roles, select the new role and hit `Next`.
+  a new role named `aws-elasticbeanstalk-ec2-role` with the policies below. While creating role choose `EC2`as trusted service, refresh roles, select the new role and hit `Next`.
+
   - AWSElasticBeanstalkWebTier
   - AWSElasticBeanstalkWorkerTier
   - AWSElasticBeanstalkMulticontainerDocker
@@ -42,7 +43,7 @@ a new role named `aws-elasticbeanstalk-ec2-role` with the policies below. While 
 
 - On AWS console and show the resources (Instances, Load Balancers, ASG, CloudFormation, S3 bucket etc.) created by Elastic Beanstalk.
 
-- Show that even you copy and paste the public IP of the instace created by EB nothing happened in browser. Explian the security group and source part of it. 
+- Show that even you copy and paste the public IP of the instace created by EB nothing happened in browser. Explian the security group and source part of it.
 
 ## Part 2 - Update the Application
 
@@ -66,23 +67,25 @@ https://blog.shikisoft.com/which_elastic_beanstalk_deployment_should_you_use/
     - Healthy threshold   : OK
     - Ignore health check : False
 ```
+
 - Wait for Elastic Beanstalk to update the application.
 
 - After the update completed click the link (Application URL) and show the Updated Web Page.
 
 - Click `Mysampleapp` >> `Application versions` and show we have one app but two versions.
 
-### Step 2 - Update the Environment Configuration - Change Capacity 
+### Step 2 - Update the Environment Configuration - Change Capacity
 
-- From the left hand menu, go to the `Mysampleapp-env` and select `Configuration` and in the opening page select `Capacity` and hit `Edit` to change autoscaling group metrics. Change min. instance number from 1 to 2. 
+- From the left hand menu, go to the `Mysampleapp-env` and select `Configuration` and in the opening page select `Capacity` and hit `Edit` to change autoscaling group metrics. Change min. instance number from 1 to 2.
 
 ```bash
 Instances Min: 2
-          Max: 4 
+          Max: 4
 ```
+
 ### Step 3 - Update the Application - Rolling
 
-- Click `Mysampleapp-env` on the left hand menu, and click `Upload and deploy` to update the application. 
+- Click `Mysampleapp-env` on the left hand menu, and click `Upload and deploy` to update the application.
 
 ```bash
 - Choose file           : php-v3.zip
@@ -102,10 +105,9 @@ Instances Min: 2
 
 - Click `Mysampleapp` >> `Application versions` and show we have one app but 3 versions.
 
-
 ### Step 4 - Update the Application - Rolling with Additional Batch
 
-- Click `Mysampleapp-env` on the left hand menu, and click `Upload and deploy` to update the application. 
+- Click `Mysampleapp-env` on the left hand menu, and click `Upload and deploy` to update the application.
 
 ```bash
 - Choose file           : php-v4.zip
@@ -117,13 +119,14 @@ Instances Min: 2
     - Healthy threshold   : OK
     - Ignore health check : False
 ```
+
 - Show one more instance has been launched as the additional batch.
 
 - Monitor `Events` and `Health` to show the instances updated.
 
 - During the update check the link (Application URL) and show v3 and v4 Web Pages.
 
-- Show one of the first instances has been terminated to come back to the initial capacity. 
+- Show one of the first instances has been terminated to come back to the initial capacity.
 
 ## Part 3 - Terminate the Environment
 
@@ -142,7 +145,7 @@ Instances Min: 2
 - Click `Environments` on the left hand menu, select terminated `Mysampleapp-env` and then from Actions menu select `Restore`.
   `(The terminated environment will remain visible for about an hour.)`
 
-- Show the environment is deployed and working again. 
+- Show the environment is deployed and working again.
 
 ### Step 3 - Delete Application
 
