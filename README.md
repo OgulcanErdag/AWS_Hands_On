@@ -2,6 +2,10 @@
 
 # ☁️ AWS Hands-On Practices
 
+![AWS](https://img.shields.io/badge/AWS-Hands--On-orange?logo=amazonaws)
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Status](https://img.shields.io/badge/status-active-success)
+
 This repository includes structured **AWS hands-on exercises** created to strengthen practical knowledge of core AWS services.  
 Each folder represents a separate topic-based lab focusing purely on **hands-on implementation** — not theory, slides, or documentation.
 
@@ -23,38 +27,36 @@ It is not a note collection or lecture summary, but a technical workspace for:
 
 Each folder corresponds to a hands-on exercise:
 
-📁EC2_Introduction
+📁 EC2 Introduction
 📁 IAM
 📁 NGINX-Launch_Template
 📁 Volumes
-📁 AMI_Snapshot
-📁 JSON_YAML
+📁 AMI & Snapshot
+📁 JSON & YAML
 📁 Load_Balancing
 📁 S3_1
 📁 S3_2
-📁 CLI
-📁 CFN-ASG-LT
+📁 ASG-LT
 📁 EFS
+📁 AWS CLI
+📁 CFN ASG ALB LT
 📁 Database_RDS
 📁 MariaDB
 📁 DB_RestoreFromSnapshot
 📁 DynamoDB
-📁 VPC_1
-📁 VPC_2
-📁 VPC_3
-📁 VPC_4
-📁 Cloudwatch
-📁 Route_53_1
-📁 Route_53_2
-📁 VPC_4
+📁 VPC - Part 1
+📁 VPC - Part 2
+📁 VPC - Part 3
+📁 VPC - Part 4
+📁 Route 53 - Part 1
+📁 Route 53 - Part 2
 📁 CloudFront
-📁 Lambda-APIGW
+📁 WAF
+📁 Lambda & API Gateway
 📁 Elastic_Beanstalk
 📁 SNS-SQS
 📁 Boto3
-📁 Cloud_Formation_Sample
-📁 Cloud_Front
-📁 Lambda_API
+📁 Cloudwatch
 
 Each folder contains:
 
@@ -106,27 +108,26 @@ Each hands-on includes:
 | 08  | S3 - Part 1            | [S3_1](./S3_1)                                       |
 | 09  | S3 - Part 2            | [S3_2](./S3_2)                                       |
 | 10  | ASG-LT                 | [ASG-LT](./ASG-LT)                                   |
-| 11  | Auto Scaling           | [Auto_Scaling](./Auto_Scaling)                       |
-| 12  | EFS                    | [EFS](./EFS)                                         |
-| 13  | AWS CLI                | [CLI](./CLI)                                         |
-| 14  | CFN ASG ALB LT         | [CFN-ASG-ALB-LT](./CFN-ASG-ALB-LT)                   |
-| 15  | Database RDS           | [Database_RDS](./Database_RDS)                       |
-| 16  | MariaDB                | [MariaDB](./MariaDB)                                 |
-| 17  | DB_RestoreFromSnapshot | [DB_RestoreFromSnapshot](./DB_RestoreFromSnapshot)   |
-| 18  | DynamoDB               | [DynamoDB](./DynamoDB)                               |
-| 19  | VPC - Part 1           | [VPC-01_Basics](./VPC-01_Basics)                     |
-| 20  | VPC - Part 2           | [VPC-02_Bastion-NAT](./VPC-02_Bastion-NAT)           |
-| 21  | VPC - Part 3           | [VPC-03_Peering-Endpoint](./VPC-03_Peering-Endpoint) |
-| 22  | VPC - Part 4           | [VPC-04_LAMP-and-NACL](./VPC-04_LAMP-and-NACL)       |
-| 23  | Route 53 - Part 1      | [Route_53_1](./Route_53_1)                           |
-| 24  | Route 53 - Part 2      | [Route_53_2](./Route_53_2)                           |
-| 25  | CloudFront             | [CloudFront](./CloudFront)                           |
-| 26  | WAF                    | [WAF](./WAF)                                         |
-| 27  | Lambda & API Gateway   | [Lambda-APIGW](./Lambda-API_GW)                      |
-| 28  | Elastic Beanstalk      | [Elastic_Beanstalk](./Elastic_Beanstalk)             |
-| 29  | SNS & SQS              | [SNS-SQS](./SNS-SQS)                                 |
-| 30  | Boto3                  | [Boto3](./Boto3)                                     |
-| 31  | CloudWatch             | [Cloudwatch](./Cloudwatch)                           |
+| 11  | EFS                    | [EFS](./EFS)                                         |
+| 12  | AWS CLI                | [CLI](./CLI)                                         |
+| 13  | CFN ASG ALB LT         | [CFN-ASG-ALB-LT](./CFN-ASG-ALB-LT)                   |
+| 14  | Database RDS           | [Database_RDS](./Database_RDS)                       |
+| 15  | MariaDB                | [MariaDB](./MariaDB)                                 |
+| 16  | DB_RestoreFromSnapshot | [DB_RestoreFromSnapshot](./DB_RestoreFromSnapshot)   |
+| 17  | DynamoDB               | [DynamoDB](./DynamoDB)                               |
+| 18  | VPC - Part 1           | [VPC-01_Basics](./VPC-01_Basics)                     |
+| 19  | VPC - Part 2           | [VPC-02_Bastion-NAT](./VPC-02_Bastion-NAT)           |
+| 20  | VPC - Part 3           | [VPC-03_Peering-Endpoint](./VPC-03_Peering-Endpoint) |
+| 21  | VPC - Part 4           | [VPC-04_LAMP-and-NACL](./VPC-04_LAMP-and-NACL)       |
+| 22  | Route 53 - Part 1      | [Route_53_1](./Route_53_1)                           |
+| 23  | Route 53 - Part 2      | [Route_53_2](./Route_53_2)                           |
+| 24  | CloudFront             | [CloudFront](./CloudFront)                           |
+| 25  | WAF                    | [WAF](./WAF)                                         |
+| 26  | Lambda & API Gateway   | [Lambda-APIGW](./Lambda-API_GW)                      |
+| 27  | Elastic Beanstalk      | [Elastic_Beanstalk](./Elastic_Beanstalk)             |
+| 28  | SNS & SQS              | [SNS-SQS](./SNS-SQS)                                 |
+| 29  | Boto3                  | [Boto3](./Boto3)                                     |
+| 30  | CloudWatch             | [Cloudwatch](./Cloudwatch)                           |
 
 ---
 
