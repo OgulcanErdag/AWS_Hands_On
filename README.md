@@ -127,7 +127,7 @@ Each hands-on includes:
 | 27  | Elastic Beanstalk      | [Elastic_Beanstalk](./Elastic_Beanstalk)             |
 | 28  | SNS & SQS              | [SNS-SQS](./SNS-SQS)                                 |
 | 29  | Boto3                  | [Boto3](./Boto3)                                     |
-| 30  | CloudWatch             | [Cloudwatch](./Cloudwatch)                           |
+| 30  | CloudWatch             | [CloudWatch](./CloudWatch)                           |
 
 ---
 
