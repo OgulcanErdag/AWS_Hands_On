@@ -57,6 +57,8 @@ Each folder corresponds to a hands-on exercise:
 📁 SNS-SQS
 📁 Boto3
 📁 Cloudwatch
+📁 CI/CD
+📁 Iam Security
 
 Each folder contains:
 
@@ -128,6 +130,8 @@ Each hands-on includes:
 | 28  | SNS & SQS              | [SNS-SQS](./SNS-SQS)                                 |
 | 29  | Boto3                  | [Boto3](./Boto3)                                     |
 | 30  | CloudWatch             | [CloudWatch](./CloudWatch)                           |
+| 31  | CI/CD                  | [CI/CD](./CI/CD)                                     |
+| 32  | Iam-Security           | [Iam-Security](./Iam-Security)                       |
 
 ---
 
