@@ -1,17 +1,22 @@
 version: 0.2
+
 phases:
   install:
-    runtime-versions:
-      nodejs: 12
     commands:
-      - npm install -g @angular/cli@9.0.6
+      - node -v
+      - npm -v
+      - npm i -g @angular/cli@9.0.6
+
   pre_build:
     commands:
-      - npm install
+      - cd CodePipeline_S3
+      - npm ci || npm install
+
   build:
     commands:
-      - ng build --prod
+      - ng build --configuration production
+
 artifacts:
-  base-directory: dist/my-angular-project
   files:
-    - '**/*'
+    - "**/*"
+  base-directory: CodePipeline_S3/dist
