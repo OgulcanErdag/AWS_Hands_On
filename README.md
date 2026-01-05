@@ -130,7 +130,7 @@ Each hands-on includes:
 | 28  | SNS & SQS              | [SNS-SQS](./SNS-SQS)                                 |
 | 29  | Boto3                  | [Boto3](./Boto3)                                     |
 | 30  | CloudWatch             | [CloudWatch](./CloudWatch)                           |
-| 31  | CI/CD                  | [CI/CD](./CI/CD)                                     |
+| 31  | CodePipeline_S3        | [CodePipeline_S3](./CodePipeline_S3)                 |
 | 32  | Iam-Security           | [Iam-Security](./Iam-Security)                       |
 
 ---
