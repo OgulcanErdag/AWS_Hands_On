@@ -9,6 +9,7 @@ phases:
 
   pre_build:
     commands:
+      - cd CodePipeline_S3
       - npm install
 
   build:
@@ -16,6 +17,6 @@ phases:
       - ng build --prod
 
 artifacts:
-  base-directory: dist
   files:
     - "**/*"
+  base-directory: CodePipeline_S3/dist
