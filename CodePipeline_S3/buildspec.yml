@@ -2,6 +2,8 @@ version: 0.2
 
 phases:
   install:
+    runtime-versions:
+      nodejs: 12
     commands:
       - node -v
       - npm -v
@@ -17,6 +19,6 @@ phases:
       - ng build --prod
 
 artifacts:
+  base-directory: CodePipeline_S3/dist
   files:
     - "**/*"
-  base-directory: CodePipeline_S3/dist
