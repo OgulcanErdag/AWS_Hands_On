@@ -9,7 +9,6 @@ phases:
 
   pre_build:
     commands:
-      - cd CodePipeline_S3
       - npm ci || npm install
 
   build:
@@ -19,4 +18,4 @@ phases:
 artifacts:
   files:
     - "**/*"
-  base-directory: CodePipeline_S3/dist
+  base-directory: dist
