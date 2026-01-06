@@ -143,7 +143,7 @@ Destination >> TeamA
 
 - Policy statement :
 
-```
+```json
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -151,9 +151,7 @@ Destination >> TeamA
       "Sid": "RequireMicroInstanceType",
       "Effect": "Deny",
       "Action": "ec2:RunInstances",
-      "Resource": [
-        "arn:aws:ec2:*:*:instance/*"
-      ],
+      "Resource": ["arn:aws:ec2:*:*:instance/*"],
       "Condition": {
         "StringNotEquals": {
           "ec2:InstanceType": "t2.micro"
