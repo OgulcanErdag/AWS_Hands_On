@@ -58,7 +58,7 @@ Each folder corresponds to a hands-on exercise:
 📁 Boto3
 📁 Cloudwatch
 📁 CI/CD
-📁 Iam Security
+📁 Aws-Organizations-SSO
 
 Each folder contains:
 
@@ -131,7 +131,7 @@ Each hands-on includes:
 | 29  | Boto3                  | [Boto3](./Boto3)                                     |
 | 30  | CloudWatch             | [CloudWatch](./CloudWatch)                           |
 | 31  | CodePipeline_S3        | [CodePipeline_S3](./CodePipeline_S3)                 |
-| 32  | Iam-Security           | [Iam-Security](./Iam-Security)                       |
+| 32  | Aws-Organizations-SSO  | [Aws-Organizations-SSO](./Aws-Organizations-SSO)     |
 
 ---
 
