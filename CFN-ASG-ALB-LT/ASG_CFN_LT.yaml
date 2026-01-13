@@ -5,7 +5,7 @@ Parameters:
   myKeyPair:
     Description: Select your keypair
     Type: AWS::EC2::KeyPair::KeyName
-    Default: first-key
+    Default: ogi-us-key
 
   myInstanceType:
     Description: Enter t3.micro, t2.micro

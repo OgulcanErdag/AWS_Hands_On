@@ -8,7 +8,7 @@ Resources:
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: Enables SSH and HTTP for CFN Instances
-      SecurityGroupIngress :
+      SecurityGroupIngress:
         - IpProtocol: tcp
           FromPort: 22
           ToPort: 22
@@ -16,14 +16,14 @@ Resources:
         - IpProtocol: tcp
           FromPort: 80
           ToPort: 80
-          CidrIp: 0.0.0.0/0  
+          CidrIp: 0.0.0.0/0
   MyInstance:
     Type: AWS::EC2::Instance
     Properties:
       ImageId: ami-0341d95f75f311023
       InstanceType: t3.micro
-      KeyName: first-key
-      SecurityGroupIds: 
+      KeyName: ogi-us-key
+      SecurityGroupIds:
         - !Ref MySecGrp
       Tags:
         - Key: Name

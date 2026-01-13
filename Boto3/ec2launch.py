@@ -7,5 +7,5 @@ instances = ec2.create_instances(
      MinCount=1,
      MaxCount=1,
      InstanceType='t3.micro',
-     KeyName='first-key' #yourkeypair without .pem
+     KeyName='ogi-us-key' #yourkeypair without .pem
  )

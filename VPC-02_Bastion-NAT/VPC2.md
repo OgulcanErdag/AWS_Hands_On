@@ -177,7 +177,7 @@ Tag             :
 ```text
 aws ec2 run-instances --image-id ami-0aa210fd2121a98b7 --instance-type t3.micro --key-name XXX --security-group-ids sg-XXX --subnet-id subnet-XXX --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=betul-NAT-instance}]'
 
-aws ec2 run-instances --image-id ami-0aa210fd2121a98b7 --instance-type t3.micro --key-name first-key --security-group-ids sg-0c1729a53f019b325 --subnet-id subnet-07b0097d2599ba371 --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=ogulcan-NAT-instance}]'
+aws ec2 run-instances --image-id ami-0aa210fd2121a98b7 --instance-type t3.micro --key-name ogi-us-key --security-group-ids sg-0c1729a53f019b325 --subnet-id subnet-07b0097d2599ba371 --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=ogulcan-NAT-instance}]'
 ```
 
 - Select created Nat Instance on EC2 list
