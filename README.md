@@ -135,9 +135,8 @@ Each hands-on includes:
 | 30  | CloudWatch              | [CloudWatch](./CloudWatch)                           |
 | 31  | CodePipeline_S3         | [CodePipeline_S3](./CodePipeline_S3)                 |
 | 32  | Aws-Organizations-SSO   | [Aws-Organizations-SSO](./Aws-Organizations-SSO)     |
-| 33  | Amazon_ECS              | [Amazon_ECS](./Amazon_ECS)                           |
-| 34  | AWS_Certificate_Manager | [AWS_Certificate_Manager](./AWS_Certificate_Manager) |
-| 35  | CloudFormation          | [CloudFormation](./CloudFormation)                   |
+| 33  | AWS_Certificate_Manager | [AWS_Certificate_Manager](./AWS_Certificate_Manager) |
+| 34  | CloudFormation          | [CloudFormation](./CloudFormation)                   |
 
 ---
 
